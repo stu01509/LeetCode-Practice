@@ -1,8 +1,8 @@
 /**
  * @param {number} x
  * @return {number}
- */ 
-const reverse = function(x) {
+ */
+const reverse = function (x) {
     const isNegative = x > 0 ? 1 : -1;
     const strNum = Math.abs(x) + '';
     const result = (strNum.split('').reverse().join('') * isNegative) - 0;
