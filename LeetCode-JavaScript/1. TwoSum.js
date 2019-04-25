@@ -6,7 +6,7 @@
 const twoSum = (nums, target) => {
     let numsMap = new Map();
     let result = [];
-    
+
     for (let i = 0; i < nums.length; i++) {
         const subNum = target - nums[i];
         if (numsMap.has(subNum) && numsMap.get(subNum) !== i) {
