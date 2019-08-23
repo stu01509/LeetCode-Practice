@@ -4,7 +4,6 @@ public class PalindromeNumber {
         PalindromeNumberSolution solution = new PalindromeNumberSolution();
         System.out.println(solution.isPalindrome(9));
         System.out.println(solution.isPalindrome(1000021));
-
     }
 
 }
