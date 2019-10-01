@@ -6,11 +6,11 @@
 const relativeSortArray = function (arr1, arr2) {
     const result = [];
     for (let i = 0; i < arr2.length; i++) {
-        for (let j = 0; j < arr1.length; j++) {
-            if (arr1.includes(arr2[i])) {
-                result.push(arr2[i]);
-                arr1.splice(arr1.indexOf(arr2[i]), 1);
-            }
+        let index = arr1.indexOf(arr2[i]);
+        while (index !== -1) {
+            result.push(arr1[index]);
+            arr1.splice(index, 1);
+            index = arr1.indexOf(arr2[i]);
         }
     }
     arr1.sort(customSort);
