@@ -26,3 +26,7 @@ const smallestRangeI = function (A, K) {
         return max - min;
     }
 };
+
+console.log(smallestRangeI([1], 0));
+console.log(smallestRangeI([0, 10], 2));
+console.log(smallestRangeI([1, 3, 6], 3));
