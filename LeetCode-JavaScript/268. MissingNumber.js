@@ -4,7 +4,7 @@
  */
 const missingNumber = function (nums) {
     let sum = nums.reduce((prev, item) => {
-	    return prev + item;
+        return prev + item;
     }, 0);
     return 0.5 * nums.length * (nums.length + 1) - sum;
 };
