@@ -44,3 +44,13 @@ MyHashMap.prototype.remove = function(key) {
  * var param_2 = obj.get(key)
  * obj.remove(key)
  */
+
+const hashMap = new MyHashMap();
+hashMap.put(1, 1);
+hashMap.put(2, 2);
+hashMap.get(1);
+hashMap.get(3);
+hashMap.put(2, 1);
+hashMap.get(2);
+hashMap.remove(2);
+hashMap.get(2);
