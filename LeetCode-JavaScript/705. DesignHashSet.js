@@ -45,3 +45,13 @@ MyHashSet.prototype.contains = function(key) {
  * obj.remove(key)
  * var param_3 = obj.contains(key)
  */
+
+const hashSet = new MyHashSet();
+hashSet.add(1);
+hashSet.add(2);
+hashSet.contains(1);
+hashSet.contains(3);
+hashSet.add(2);
+hashSet.contains(2);
+hashSet.remove(2);
+hashSet.contains(2);
