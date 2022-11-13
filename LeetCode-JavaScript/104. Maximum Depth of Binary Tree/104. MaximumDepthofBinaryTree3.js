@@ -20,7 +20,7 @@ const maxDepth = function (root) {
         return 0;
     }
 
-    let reuslt = 1;
+    let reuslt = 0;
     const stack = [
         [root, 1]
     ];
