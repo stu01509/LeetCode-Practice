@@ -16,21 +16,22 @@ function TreeNode(val, left, right) {
  * @param {number} k
  * @return {number}
  */
-const kthSmallest = function (root, k) {
-    const stack = [root];
-
-    while (stack.length) {
-        while (root) {
-            stack.push(root);
-            root = root.left;
+const kthSmallest = (root, k) => {
+    let result = 0;
+    const dfs = (node) => {
+        if (!node || k < 0) {
+            return;
         }
-        root = stack.pop();
+        dfs(node.left);
         k--;
         if (k === 0) {
-            return root.val;
+            result = node.val;
         }
-        root = root.right;
-    }
+        dfs(node.right);
+    };
+
+    dfs(root);
+    return result;
 };
 
 console.log(kthSmallest(new TreeNode(3, new TreeNode(1, null, new TreeNode(2)), new TreeNode(4)), 1));
